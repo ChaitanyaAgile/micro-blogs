@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: posts-service
+spec:
+  type: NodePort
+  selector: # selector will see for pods named posts
+    app: posts
+  ports:
+    - name: posts
+      protocol: TCP
+      port: 4000 # from port 4000 of service layer
+      targetPort: 4000 # route trafic to port 4000 of our pod
