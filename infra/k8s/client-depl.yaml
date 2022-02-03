@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      application: client
+  template:
+    metadata:
+      labels:
+        application: client
+    spec:
+      containers:
+        - name: posts
+          image: chaitanyaagile/client
+          imagePullPolicy: IfNotPresent
