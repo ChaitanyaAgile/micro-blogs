@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comments-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      application: comments
+  template:
+    metadata:
+      labels:
+        application: comments
+    spec:
+      containers:
+        - name: posts
+          image: chaitanyaagile/comments
+          imagePullPolicy: IfNotPresent

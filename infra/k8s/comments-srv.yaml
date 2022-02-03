@@ -1,0 +1,20 @@
+# api version we are using may be almost like
+# any library version or name
+apiVersion: v1
+
+# which kind of k8s object we are creating
+kind: Service
+
+# metadata tobe attached with object
+metadata:
+  name: comments-service
+
+spec:
+  type: ClusterIP
+  selector:
+    application: comments
+  ports:
+    - name: comments
+      protocol: TCP
+      port: 4001
+      targetPort: 4001

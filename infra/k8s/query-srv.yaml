@@ -1,0 +1,20 @@
+# api version we are using may be almost like
+# any library version or name
+apiVersion: v1
+
+# which kind of k8s object we are creating
+kind: Service
+
+# metadata tobe attached with object
+metadata:
+  name: query-service
+
+spec:
+  type: ClusterIP
+  selector:
+    application: query
+  ports:
+    - name: query
+      protocol: TCP
+      port: 4002
+      targetPort: 4002
