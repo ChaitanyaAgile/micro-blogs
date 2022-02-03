@@ -1,4 +1,4 @@
-#Setup
+# Setup
 
 - first clone the repository and goto the cloned directory
 - run command ```git submodules update --init --recursive```
