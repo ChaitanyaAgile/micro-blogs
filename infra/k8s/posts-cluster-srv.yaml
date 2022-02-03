@@ -1,0 +1,19 @@
+# which apis to use
+apiVersion: v1
+
+# kind of object
+kind: Service
+
+# metadata tobe attached with the objects
+metadata:
+  name: posts-cluster-service
+
+# specs of container or pod that it will work with
+spec:
+  selector:
+    app: posts # get pod named app: posts from the deployment
+  ports:
+    - name: posts
+      protocol: TCP
+      port: 4000
+      targetPort: 4000

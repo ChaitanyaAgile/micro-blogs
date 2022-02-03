@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: event-bus
+      application: event-bus
   template:
     metadata:
       labels:
-        app: event-bus
+        application: event-bus
     spec:
       containers:
         - name: posts

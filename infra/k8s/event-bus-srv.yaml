@@ -1,0 +1,20 @@
+# api version we are using may be almost like
+# any library version or name
+apiVersion: v1
+
+# which kind of k8s object we are creating
+kind: Service
+
+# metadata tobe attached with object
+metadata:
+  name: e-bus-service
+
+spec:
+  type: ClusterIP
+  selector:
+    application: event-bus
+  ports:
+    - name: event-bus
+      protocol: TCP
+      port: 4005
+      targetPort: 4005
