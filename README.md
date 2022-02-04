@@ -11,6 +11,9 @@
 - run minikube ip and note the ip it returns
 - run `eval $(minikube docker-env)`
 - add `[ip-from-minkube posts.com]` hosts file at `/etc/hosts`
+
+## Run with kubectl
+
 - go to `infra/k8s` directory and run `kubectl apply -f .`
 
 ## Run with skaffold
